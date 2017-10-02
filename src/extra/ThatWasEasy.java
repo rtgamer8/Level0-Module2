@@ -17,7 +17,6 @@ public class ThatWasEasy extends MouseAdapter {
 
 	public void mouseClicked(MouseEvent arg0) {
 		/* Use the speak method to make the button work. */
-
 		
 	}
 
@@ -44,19 +43,14 @@ public class ThatWasEasy extends MouseAdapter {
 
 	private void showEasyButton() {
 		JFrame quizWindow = new JFrame();
+		quizWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		quizWindow.setVisible(true);
 
-		URL imageURL = null;
-		try {
-			imageURL = new File("/Users/league/Google Drive/league-images/easy_button.jpg").toURI().toURL();
-		} catch (MalformedURLException e) {
-			System.err.println("Could not load file: " + imageURL);
-		}
-
-		Icon icon = new ImageIcon(imageURL);
+		Icon icon = new ImageIcon(getClass().getResource("easy_button.jpg"));
 		this.easyButtonImage = new JLabel(icon);
 		quizWindow.add(easyButtonImage);
 		quizWindow.pack();
+		
 	}
 
 }
