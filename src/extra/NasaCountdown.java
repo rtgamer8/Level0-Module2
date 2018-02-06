@@ -20,7 +20,9 @@ public class NasaCountdown {
 		
 		// 1. Print a countdown from 10 to 0 on the console
 
-		// 4. Use the speak method to hear the countdown.
+			// 4. Use the speak method to hear the countdown.
+		
+			// 6. Use the following code to make the program wait one second for each number: Thread.sleep(1000);
 		
 		// 5. when the counting is done, speak "blastoff!"
 	}
