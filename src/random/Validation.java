@@ -12,7 +12,9 @@ public class Validation {
 
 		// 1. OPTIONAL: Watch the first 2 minutes of this movie: http://vimeo.com/2485018
 		
-		int randomNumber = new Random().nextInt(5);
+		Random randomMaker = new Random();
+		
+		int randomNumber = randomMaker.nextInt(5);
 		
 		// 2. On paper, write all the numbers that get printed when you run this class 10 times
 		
