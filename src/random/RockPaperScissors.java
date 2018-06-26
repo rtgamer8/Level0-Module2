@@ -33,10 +33,6 @@ public class RockPaperScissors extends JPanel implements ActionListener{
     public void run(){
 
 		try {
-
-			// 1. Find 3 pictures (a rock, paper, and scissors) on the Internet.
-			// Drop the pictures into this package
-			// Replace the names below with your images
 		
 			rockImage = new ImageIcon(getClass().getResource("rock.png"));
 			paperImage = new ImageIcon(getClass().getResource("paper.jpeg"));
@@ -78,12 +74,15 @@ public class RockPaperScissors extends JPanel implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         
-        //2. Run the program 4 times. Does the computer always choose the same thing?
+        //1. Run the program and play many rounds of Rock Paper Scissors. Does the computer always choose the same thing?
 
-        //3. Change the value of opponentSelection to be a random number between 0 and 2;
+        //2. Change the value of opponentSelection to be a random number between 0 and 2;
+	//   Don't forget to create a Random object.
+	    
+        //2. Change the value of opponentSelection to be a random number between 0 and 2; 
         int opponentSelection = 0;
         
-        //4. Run the program again. Is the result different?
+        //3. Run the program again. Is the result different?
  
         int selection = 0;
        
