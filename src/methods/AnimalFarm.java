@@ -43,8 +43,8 @@ public class AnimalFarm {
 	/* Ignore this stuff */
 
 	public void playNoise(String soundFile) {
-		Clip clip = null;
 		try {
+			Clip clip = null;
 			AudioInputStream inputStream = AudioSystem.getAudioInputStream(new File("src/methods/" + soundFile));
 			DataLine.Info info = new DataLine.Info(Clip.class, inputStream.getFormat());
 			clip = (Clip) AudioSystem.getLine(info);
