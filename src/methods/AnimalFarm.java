@@ -1,15 +1,13 @@
 package methods;
 
+import java.applet.AudioClip;
+
 //Copyright (c) The League of Amazing Programmers 2013-2017
 
 //Level 0
 
-import java.io.File;
 
-import javax.sound.sampled.AudioInputStream;
-import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.Clip;
-import javax.sound.sampled.DataLine;
+import javax.swing.JApplet;
 import javax.swing.JOptionPane;
 
 public class AnimalFarm {
@@ -44,12 +42,8 @@ public class AnimalFarm {
 
 	public void playNoise(String soundFile) {
 		try {
-			Clip clip = null;
-			AudioInputStream inputStream = AudioSystem.getAudioInputStream(new File("src/methods/" + soundFile));
-			DataLine.Info info = new DataLine.Info(Clip.class, inputStream.getFormat());
-			clip = (Clip) AudioSystem.getLine(info);
-			clip.open(inputStream);
-			clip.start();
+			AudioClip sound = JApplet.newAudioClip(getClass().getResource(soundFile));
+			sound.play();
 			Thread.sleep(3400);
 		} catch (Exception ex) {
 			ex.printStackTrace();
