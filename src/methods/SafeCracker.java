@@ -18,7 +18,7 @@ public class SafeCracker {
 		 * Your mission: use the tryCode method to crack the safe by trying all possible
 		 * combinations
 		 */
-
+playTheSoundOfSuccess();
 
 	}
 
@@ -36,12 +36,11 @@ public class SafeCracker {
 
 	private static void playTheSoundOfSuccess() {
 		try {
-			Clip clip = AudioSystem.getClip();
-			clip.open(AudioSystem.getAudioInputStream(SafeCracker.class.getResource("me-gusta.wav")));
-			clip.start();
+			AudioClip sound = JApplet.newAudioClip(SafeCracker.class.getResource("me-gusta.wav"));
+			sound.play();
 			Thread.sleep(3400);
-		} catch (Exception e) {
-			e.printStackTrace();
+		} catch (Exception ex) {
+			ex.printStackTrace();
 		}
 	}
 
